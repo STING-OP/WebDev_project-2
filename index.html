@@ -33,17 +33,26 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <!-- Header -->
-  <h1 class="heading">GGSIPU Attendance Record</h1>
+ <div class="container mr-5">
+    <div class="row">
+     <div class="col-7">
+        <h1 class="heading">GGSIPU Attendance Record</h1>
+     </div>
+     <div class="col-5 pt-4">
+        <img src="./images/logo.png" class="logo" alt="logo">
+     </div>
+    </div>
+ </div>
   <!-- Login Box -->
   <div class="login container d-flex justify-content-center">
-    <form action="process.php">
+    <form action="login.php" method="post">
       <label for="email2" class="mb-3 mr-sm-2 mt-3">College Mail:</label>
       <input type="email" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Enter College mail" name="email"
         required title="Enter mail">
       <label for="pwd2" class="mb-3 mr-sm-2">Password:</label>
       <input type="text" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Enter password" name="pswd" required
         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Enter password">
-      <button class="btn btn-outline-dark mt-4 mb-4">Login</button>
+      <button class="btn btn-outline-dark mt-4 mb-4" name="Login">Login</button>
     </form>
   </div>
   <!-- requirements for making password -->
