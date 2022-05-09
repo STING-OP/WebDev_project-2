@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box !important;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    background-color: #041d53;
+}
+
+.heading {
+    font-family: 'Alfa Slab One', cursive;
+    color: white;
+    margin-top: 2.25em;
+    text-align: center;
+}
+
+.login {
+    display: block;
+    max-width: 400px;
+    margin-top: 6.875em;
+    background-color: #ffc805;
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+
+input[type=text] {
+    max-width: 200px;
+}
+
+label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+ul {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
