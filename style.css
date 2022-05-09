@@ -17,6 +17,10 @@ html {
     text-align: center;
 }
 
+.heading:hover {
+    color: green;
+}
+
 .login {
     display: block;
     max-width: 400px;
@@ -41,4 +45,39 @@ ul {
     color: white;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
+}
+
+.logo {
+    min-height: 150px;
+    max-width: 40%;
+}
+
+/* css end for index.html */
+
+/* css for select.html */
+select {
+    max-width: 200px;
+}
+
+.heading2 {
+    font-family: 'Alfa Slab One', cursive;
+    color: white;
+    margin-top: 2.25em;
+    text-align: center;
+}
+
+.heading2:hover {
+    color: violet;
+}
+
+.txt {
+    color: #ffc805;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.choose {
+    margin-top: 50px;
 }
