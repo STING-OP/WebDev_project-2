@@ -120,8 +120,8 @@
                             <p>Check Details</p>
                             <li>
                                 <form method="post" action="date.php">
-                                    <label for="tDate">Select date:</label><br>
-                                    <input type="date" id="tDate" name="tDate" class="mr-2 ml-3">
+                                    <label for="cDate">Select date:</label><br>
+                                    <input type="date" id="cDate" name="cDate" class="mr-2 ml-3">
                                     <button class="btn btn-sm mb-1 btn-light">Submit</button>
                                 </form>
                             </li>
@@ -163,10 +163,10 @@
                 </nav>
                 <h3 class="heading">USICT Semester-4</h3>
                 <hr>
-                <label for="tDate">Enter date of entry:</label>
-                <input type="date" id="tDate" name="tDate">
-                <div class="container table">
-                    <form action="radio.php" method="post">
+                <form action="radio.php" method="post">
+                    <label for="tDate">Enter date of entry:</label>
+                    <input type="date" id="tDate" name="tDate">
+                    <div class="container table">
                         <table class="table table-borderless table-hover">
                             <thead>
                                 <tr>
@@ -230,12 +230,12 @@
                                     </td>
                             </tbody>
                         </table>
-                        <button class="btn btn-outline-danger" name="submit">Submit</button>
-                    </form>
-                </div>
-
+                        <button type="submit" class="btn btn-outline-danger" name="submit">Submit</button>
+                </form>
             </div>
+
         </div>
+    </div>
     </div>
 </body>
 
