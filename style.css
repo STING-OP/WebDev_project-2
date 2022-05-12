@@ -47,9 +47,45 @@ ul {
     font-size: 13px;
 }
 
-.logo {
-    min-height: 150px;
-    max-width: 40%;
+@media screen and (max-width: 576px) {
+
+    .logo {
+        min-height: 80px !important;
+        max-width: 30% !important;
+    }
+
+    .login {
+        max-width: 260px;
+        margin-bottom: 90px;
+    }
+
+    .heading {
+        margin-top: 1.25em;
+        font-size: x-large;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+    .logo {
+        /* min-height: 90px !important; */
+        /* margin-bottom: 2px; */
+        margin-left: 70px;
+        height: 90px;
+        /* max-width: 100% !important; */
+    }
+
+    .login {
+        max-width: 350px;
+        margin-bottom: 75px;
+    }
+
+    .heading {
+        margin-top: 1.25em;
+        margin-left: 150px;
+        /* font-size: xx-large; */
+    }
+
 }
 
 /* css end for index.html */
