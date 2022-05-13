@@ -36,7 +36,7 @@
     <div class="container choose">
         <form action="action.php" method="post">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 d-flex justify-content-center">
                     <select name="school" class="custom-select mb-3">
                         <option selected>Select school</option>
                         <option value="USICT">USICT</option>
@@ -46,14 +46,14 @@
                         <option value="USAP">USAP</option>
                     </select>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 d-flex justify-content-center">
                     <select name="course" class="custom-select mb-3">
                         <option selected>Select course</option>
                         <option value="btech">BTECH</option>
                         <option value="mtech">MTECH</option>
                     </select>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 d-flex justify-content-center">
                     <select name="branch" class="custom-select mb-3">
                         <option selected>Select branch</option>
                         <option value="CSE">CSE</option>
@@ -61,7 +61,7 @@
                         <option value="IT">IT</option>
                     </select>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2 d-flex justify-content-center">
                     <select name="semester" class="custom-select mb-3">
                         <option selected>Select semester</option>
                         <option value="1">1</option>
@@ -73,7 +73,9 @@
                         <option value="7">7</option>
                         <option value="8">8</option>
                     </select>
-                    <button class="btn btn-danger mt-5" name="submit">submit</button>
+                </div>
+                <div class="col-sm-1">
+                    <button class="btn btn-danger ml-5 d-flex justify-content-center" name="submit">submit</button>
                 </div>
             </div>
         </form>
