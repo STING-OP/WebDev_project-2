@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+.sidenav {
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #041d53;
+    overflow: hidden;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.heading {
+    font-family: 'Alata';
+    margin-top: 1.55em;
+    text-align: center;
+}
+
+p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+.navbar-toggler {
+    background-color: brown;
+}
+
+.table {
+    padding-top: 50px;
+}
+
+.icon {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: rgb(23, 23, 23);
+}
+
+.sidenav ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+.sidenav ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+}
+
+.sidenav ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.pleft {
+    padding-left: 0px;
+}
+
+.main {
+    margin-left: 240px;
+    /* Same as the width of the sidenav */
+    font-size: 18px;
+    /* Increased text to enable scrolling */
+    padding: 0px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sidenav {
+        width: 140px;
+        overflow: scroll;
+    }
+
+    .main {
+        margin-left: 140px;
+    }
+
+    .go {
+        margin-top: 20px !important;
+        width: 100%;
+        background-color: gold;
+    }
+
+    .date {
+        width: 100px !important;
+    }
+
+    .icon {
+        margin-top: 40px;
+    }
+
+    .dtxt {
+        padding-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+}
