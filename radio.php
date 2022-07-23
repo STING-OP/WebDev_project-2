@@ -16,7 +16,7 @@
                   mysqli_query($db, $sql);
               }
               echo "<h3>data stored in a database successfully </h3>"; 
-              echo "<br><br><br>"."<a href='AttPanel.html'> Back to previous Page</a>";
+              echo "<br><br><br>"."<a href='panel.html'> Back to previous Page</a>";
               echo "<br><br><br>"."<a href='select.html'> Back to select Page</a>";
        mysqli_close($db);
   }
@@ -26,7 +26,7 @@
         } 
         else {
             echo"Please check all the radio buttons and enter date";
-            echo "<br><br><br>"."<a href='AttPanel.html'> Back to previous Page</a>";
+            echo "<br><br><br>"."<a href='panel.html'> Back to previous Page</a>";
         }
       
   }
