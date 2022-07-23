@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Attendance panel</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="StyleNew.css">
+
+    <!-- Google font -->
+    <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <div class="sidenav">
+        <div class="container bg-warning pt-3 pb-3">
+            <div class="row">
+                <div class="col">
+                    <h3 class="pt-3 text-white">GGSIPU</h3>
+                </div>
+                <div class="col">
+                    <img src="./images/logo.png" class="img-fluid" alt="logo">
+                </div>
+            </div>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>User panel</p>
+            <li>
+                <a href="#add" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-light">Add
+                    details</a>
+                <ul class="collapse list-unstyled" id="add">
+                    <li>
+                        <a href="#" id="add">Add Details</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul style="border-bottom: 1px solid white;" class="pleft">
+            <li>
+                <a href="#dd" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle text-light">Day
+                    details</a>
+                <ul class="collapse list-unstyled" id="dd">
+                    <li>
+                        <a href="#">Remarks of the day</a>
+                    </li>
+                    <li>
+                        <a href="#">Susbstitute teacher(If any)</a>
+                    </li>
+                    <li>
+                        <a href="#">Holidays in a month</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="pleft">
+            <p>Check Details</p>
+            <li>
+                <form method="post" action="date.php">
+                    <label for="cDate" class="text-light">Select date:</label><br>
+                    <input type="date" id="cDate" name="cDate" class="mr-2 ml-3 date">
+                    <button class="btn btn-sm mb-1 btn-light go">Go</button>
+                </form>
+            </li>
+        </ul>
+        <ul>
+            <li class="icon">
+                <img src="./images/man.png" class="rounded-circle w-50 h-50 img-fluid mr-3" alt="icon">
+            </li>
+        </ul>
+        <ul>
+            <li class="d-flex justify-content-center pt-3 mr-3">
+                <button class="btn btn-outline-success">Logout</button>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #041d53;">
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Link 1 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 2</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" id="search" placeholder="Search">
+                </form>
+            </div>
+        </nav>
+        <h3 class="heading">USICT Semester-4</h3>
+        <hr>
+        <div class="container mod bg-warning w-25">
+            <form id="editForm">
+                <label for="enroll" class="mb-3 mr-sm-2 mt-3">Enroll Number</label>
+                <input type="number" class="form-control mb-2 mr-sm-2" id="enroll" placeholder="Enter enroll number"
+                    required title="Enter enroll number" name="enroll">
+                <label for="name" class="mb-3 mr-sm-2 mt-3">Name</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="name" name="name" placeholder="Enter name"
+                    required title="Enter name">
+                <button class="btn btn-success mt-4 mr-5 mb-4" id="update">Update</button>
+                <button class="btn btn-danger mt-4 mr-5 mb-4" id="close">Close</button>
+            </form>
+        </div>
+
+        <div class="container mod1 bg-warning w-25">
+            <form id="addForm">
+                <label for="eno" class="mb-3 mr-sm-2 mt-3">Enroll Number</label>
+                <input type="number" class="form-control mb-2 mr-sm-2" id="eno" name="enroll"
+                    placeholder="Enter enroll number" required title="Enter enroll number">
+                <label for="Name" class="mb-3 mr-sm-2 mt-3">Name</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="Name" name="name" placeholder="Enter name"
+                    required title="Enter name">
+                <button class="btn btn-success mt-4 mr-5 mb-4" id="add1">Add</button>
+                <button class="btn btn-danger mt-4 mr-5 mb-4" id="close1">Close</button>
+            </form>
+        </div>
+
+        <form action="radio.php" method="post">
+            <label for="tDate" class="dtxt">Select date of entry:</label>
+            <input type="date" id="tDate" name="tDate">
+            <div class="container table">
+                <table class="table table-borderless table-hover table-responsive-md">
+                    <thead>
+                        <tr>
+                            <th>Enrollment No.</th>
+                            <th>Name</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="load-table">
+
+                    </tbody>
+                </table>
+                <button type="submit" class="btn btn-outline-danger" name="submit">Submit</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
