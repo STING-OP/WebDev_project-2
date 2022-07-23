@@ -6,7 +6,7 @@
         $branch = $_POST['branch'];
         $semester = $_POST['semester'];
         if($school=="USICT" && $course=="btech" && $branch=="CSE" && $semester=="4"){
-            echo "<script>window.location.href='AttPanel.html';</script>";
+            echo "<script>window.location.href='panel.html';</script>";
         }
         else{
             echo"Please select USICT, BTECH, CSE, 4 sem to continue";
