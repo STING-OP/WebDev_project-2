@@ -16,7 +16,7 @@ $(document).ready(function () {
                             + "<td>" + value.enroll + "</td>" +
                             "<td>" + value.name + "</td>" +
                             "<td><input type='radio' name='" + value.enroll + "' value='present'></td>" +
-                            "<td><input type='radio' name='" + value.enroll + "' value='present'></td>" +
+                            "<td><input type='radio' name='" + value.enroll + "' value='absent'></td>" +
                             "<td><button class='editbtn' type='button' data-eid='" + value.enroll + "'>Edit</button></td>" +
                             "<td><button class='delbtn' type='button' data-id='" + value.enroll + "'>Delete</button></td>" +
                             "</tr>");
@@ -82,7 +82,7 @@ $(document).ready(function () {
         e.preventDefault();
         var jsonObj = jsonData("#addForm");
         if (jsonObj == false) {
-            message("All Fields are required.");
+            message("All fields are required.");
         } else {
             $.ajax({
                 url: 'http://localhost/project%202/apiInsert.php',
@@ -104,7 +104,7 @@ $(document).ready(function () {
         e.preventDefault();
         var jsonObj = jsonData("#editForm");
         if (jsonObj == false) {
-            message("All Fields are required.");
+            message("All fields are required.");
         } else {
             $.ajax({
                 url: 'http://localhost/project%202/apiUpdate.php',
@@ -171,6 +171,77 @@ $(document).ready(function () {
                 }
             }
         });
+    });
+
+    //For radio data 
+
+    $("#radioForm").submit(function (e) {
+
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+        var jsonObj = jsonData("#radioForm");
+        if (jsonObj == false) {
+            message("All fields are required.");
+        } else {
+            $.ajax({
+                url: 'http://localhost/project%202/radio.php',
+                type: "POST",
+                data: jsonObj,
+                success: function (data) {
+                    message(data.message);
+                    if (data.status == true) {
+                        $("#radioForm").trigger("reset");
+                    }
+                }
+            });
+        }
+
+    });
+
+    //Fetch record using date
+    $("#tab2").hide();
+    $("#clear").hide();
+    $("#go1").on("click", function (e) {
+        e.preventDefault();
+        $("#tab2").show();
+        $("#tab1").hide();
+        $("#sub").hide();
+        $("#tDate").hide();
+        $(".dtxt").hide();
+        $("#clear").show();
+        var value = $("#cDate").val();
+        $("#loadTable2").html("");
+        var obj = { dateVal: value };
+        var myJSON = JSON.stringify(obj);
+        $.ajax({
+            url: 'http://localhost/project%202/fetchRecords.php',
+            type: "POST",
+            data: myJSON,
+            success: function (data) {
+                if (data.status == false) {
+                    $("#loadTable2").append("<tr><td colspan='3'><h2>" + data.message + "</h2></td></tr>");
+
+                } else {
+                    $.each(data, function (key, value) {
+                        $("#loadTable2").append("<tr>"
+                            + "<td>" + value.enrollNo + "</td>" +
+                            "<td>" + value.AbsentPresent + "</td>" +
+                            "<td>" + value.entryDate + "</td>" +
+                            "</tr>");
+                    });
+                }
+            }
+        });
+    });
+
+    $("#clear").click(function () {
+        loadTable();
+        $("#tab1").show();
+        $("#tab2").hide();
+        $("#sub").show();
+        $("#tDate").show();
+        $(".dtxt").show();
+        $("#clear").hide();
+        $("#cDate").val("");
     });
 
 });
