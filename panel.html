@@ -65,20 +65,15 @@
                     <li>
                         <a href="#">Susbstitute teacher(If any)</a>
                     </li>
-                    <li>
-                        <a href="#">Holidays in a month</a>
-                    </li>
                 </ul>
             </li>
         </ul>
         <ul class="pleft">
             <p>Check Details</p>
             <li>
-                <form method="post" action="date.php">
-                    <label for="cDate" class="text-light">Select date:</label><br>
-                    <input type="date" id="cDate" name="cDate" class="mr-2 ml-3 date">
-                    <button class="btn btn-sm mb-1 btn-light go">Go</button>
-                </form>
+                <label for="cDate" class="text-light">Select date:</label><br>
+                <input type="date" id="cDate" name="dateVal" class="mr-2 ml-3 date">
+                <button type="submit" class="btn btn-sm mb-1 btn-light go" id="go1">Go</button>
             </li>
         </ul>
         <ul>
@@ -111,7 +106,7 @@
                 </form>
             </div>
         </nav>
-        <h3 class="heading">USICT Semester-4</h3>
+        <h3 class="heading">USICT CSE(sem-4)</h3>
         <hr>
         <div class="container mod bg-warning w-25">
             <form id="editForm">
@@ -138,30 +133,43 @@
                 <button class="btn btn-danger mt-4 mr-5 mb-4" id="close1">Close</button>
             </form>
         </div>
+        <div class="container table">
+            <table id="tab2" class="table table-borderless table-hover table-responsive-md">
+                <thead>
+                    <tr>
+                        <th>Enrollment No.</th>
+                        <th>Present/Absent</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="loadTable2">
 
-        <form action="radio.php" method="post">
-            <label for="tDate" class="dtxt">Select date of entry:</label>
-            <input type="date" id="tDate" name="tDate">
-            <div class="container table">
-                <table class="table table-borderless table-hover table-responsive-md">
-                    <thead>
-                        <tr>
-                            <th>Enrollment No.</th>
-                            <th>Name</th>
-                            <th>Present</th>
-                            <th>Absent</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody id="load-table">
+                </tbody>
+            </table>
+            <button id="clear" class="btn btn-danger">Clear</button>
+            <form id="radioForm">
+                <label for="tDate" class="dtxt">Select date of entry:</label>
+                <input type="date" id="tDate" name="tDate">
+                <div class="container table">
+                    <table id="tab1" class="table table-borderless table-hover table-responsive-md">
+                        <thead>
+                            <tr>
+                                <th>Enrollment No.</th>
+                                <th>Name</th>
+                                <th>Present</th>
+                                <th>Absent</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="load-table">
 
-                    </tbody>
-                </table>
-                <button type="submit" class="btn btn-outline-danger" name="submit">Submit</button>
-        </form>
-    </div>
-    <script src="index.js"></script>
+                        </tbody>
+                    </table>
+                    <button type="submit" class="btn btn-outline-danger" id="sub" name="submit">Submit</button>
+            </form>
+        </div>
+        <script src="index.js"></script>
 </body>
 
 </html>
