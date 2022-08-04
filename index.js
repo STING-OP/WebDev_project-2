@@ -143,14 +143,15 @@ $(document).ready(function () {
     });
 
     // Live Search Record
-    $("#search").on("keyup", function () {
-        var search_term = $(this).val();
+
+    function searchFunc() {
+        var search_term = $("#search").val();
         $("#load-table").html("");
         var obj = { search: search_term };
         var myJSON = JSON.stringify(obj);
 
         $.ajax({
-            url: 'http://localhost/project%202/apiSearch.php',
+            url: "http://localhost/project%202/apiSearch.php",
             type: "POST",
             data: myJSON,
             success: function (data) {
@@ -171,6 +172,42 @@ $(document).ready(function () {
                 }
             }
         });
+    }
+
+    $("#search2").hide();
+
+    function searchFunc2() {
+        var search_val = $("#search2").val();
+        $("#loadTable2").html("");
+        var obj = { search: search_val };
+        var myJSON = JSON.stringify(obj);
+
+        $.ajax({
+            url: "http://localhost/project%202/searchApi.php",
+            type: "POST",
+            data: myJSON,
+            success: function (data) {
+                if (data.status == false) {
+                    $("#loadTable2").append("<tr><td colspan='3'><h2>" + data.message + "</h2></td></tr>");
+
+                } else {
+                    $.each(data, function (key, value) {
+                        $("#loadTable2").append("<tr>"
+                            + "<td>" + value.enrollNo + "</td>" +
+                            "<td>" + value.AbsentPresent + "</td>" +
+                            "<td>" + value.entryDate + "</td>" +
+                            "</tr>");
+                    });
+                }
+            }
+        });
+    }
+    $(".makeSearch").on("keyup", function () {
+        searchFunc();
+    });
+
+    $("#search2").on("keyup", function () {
+        searchFunc2();
     });
 
     //For radio data 
@@ -208,6 +245,8 @@ $(document).ready(function () {
         $("#tDate").hide();
         $(".dtxt").hide();
         $("#clear").show();
+        $(".makeSearch").hide();
+        $("#search2").show();
         var value = $("#cDate").val();
         $("#loadTable2").html("");
         var obj = { dateVal: value };
@@ -242,6 +281,10 @@ $(document).ready(function () {
         $(".dtxt").show();
         $("#clear").hide();
         $("#cDate").val("");
+        $(".makeSearch").val("");
+        $("#search2").val("");
+        $(".makeSearch").show();
+        $("#search2").hide();
     });
 
 });
