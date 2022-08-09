@@ -1,6 +1,5 @@
 # WebDev_project-2
-Made online attendance system for my university GGSIPU, Delhi using Html, CSS, Php and Bootstrap-4
-
+I Made online attendance system for my university GGSIPU, Delhi using Html, CSS, Php, Mysql DB Bootstrap-4, Javascript(JQuery) and REST API
 Login Page
 
 ![image](https://user-images.githubusercontent.com/96282402/168216160-8e9c8c9a-e9a2-4cbf-ba1b-2869aeaefd4c.png)
