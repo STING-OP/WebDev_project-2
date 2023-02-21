@@ -10,8 +10,4 @@ Parameters selection page
 
 Attendance Panel
 
-![image](https://user-images.githubusercontent.com/96282402/168216462-483ace4d-542b-48b2-b821-6a480f1a09d7.png)
-
-
-
-
+![Screenshot_20230221_165307](https://user-images.githubusercontent.com/96282402/220332944-c05ae82a-95af-4aff-b794-2b3e8fae4135.png)
