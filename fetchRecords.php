@@ -3,7 +3,7 @@ header('Content-Type:application/json');
 header('Access-Control-Allow-Origin:*');
 $data= json_decode(file_get_contents("php://input"), true);
 $date_val= $data['dateVal'];
- $con=   mysqli_connect('localhost', 'root', '', 'ggsipuattendancedb') or  die("Connection failed: " . mysqli_connect_error());
+ $con=   mysqli_connect('localhost', 'root', '', 'ggsipuatt') or  die("Connection failed: " . mysqli_connect_error());
  $sql= "SELECT * FROM radiodata WHERE entryDate='{$date_val}'";
  $res = mysqli_query($con, $sql) or die("Sql query failed");
  if(mysqli_num_rows($res)>0){

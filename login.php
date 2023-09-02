@@ -41,7 +41,7 @@ function test_input($data)
 }
 // Login Data validation with respect to database
 if ($count == 0) {
-    $db =   mysqli_connect('localhost', 'root', '', 'ggsipuattendancedb');
+    $db =   mysqli_connect('localhost', 'root', '', 'ggsipuatt');
     if ($db) {
 
         $sql = "select mail, password from logindetails WHERE mail='" . $mail . "' and  password='" . $password . "'";

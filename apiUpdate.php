@@ -6,7 +6,7 @@ header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 $data= json_decode(file_get_contents("php://input"), true);
 $enroll=$data['enroll'];
 $name=$data['name'];
-$con= mysqli_connect('localhost', 'root', '', 'ggsipuattendancedb') or  die("Connection failed: " . mysqli_connect_error());
+$con= mysqli_connect('localhost', 'root', '', 'ggsipuatt') or  die("Connection failed: " . mysqli_connect_error());
 $sql= "UPDATE student_details set name= '{$name}' where enroll= {$enroll}";
  if(mysqli_query($con,$sql)){
     echo json_encode(array('message'=>'Student Record Updated.','status'=>true));
