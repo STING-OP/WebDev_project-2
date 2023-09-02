@@ -1,5 +1,13 @@
 # WebDev_project-2
-Made online attendance system for my university GGSIPU, Delhi using Html, CSS, Php and Bootstrap-4
+Things to be noted:
+
+Enter mail:nitin041@ipu.ac.in and password: Abcdef@12 to login
+
+Use xampp(compulsory) for the support of backend languages like PHP.
+
+**compulsory [Select USICT, BTECH, CSE, 4 semester to continue]. I have added details for my class only till now.
+
+you cab Download all files from GitHub and then Run the web app in localhost(using xampp). Use a laptop for a better viewing experience.
 
 Login Page
 
@@ -11,8 +19,4 @@ Parameters selection page
 
 Attendance Panel
 
-![image](https://user-images.githubusercontent.com/96282402/168216462-483ace4d-542b-48b2-b821-6a480f1a09d7.png)
-
-
-
-
+![Screenshot_20230221_165307](https://user-images.githubusercontent.com/96282402/220332944-c05ae82a-95af-4aff-b794-2b3e8fae4135.png)
