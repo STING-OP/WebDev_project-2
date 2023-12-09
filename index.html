@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+     <!-- css stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,20 +21,6 @@
 </head>
 
 <body>
-  <!-- css stylesheet -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
   <!-- Header -->
   <div class="container mr-5">
     <div class="row">
@@ -45,17 +34,16 @@
   </div>
   <!-- Login Box -->
   <div class="login container d-flex justify-content-center">
-    <form action="login.php" method="post">
+    <form  action="loginN.php" method="post">
       <label for="email2" class="mb-3 mr-sm-2 mt-3">College Mail:</label>
       <input type="email" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Enter College mail" name="email"
         required title="Enter mail">
       <label for="pwd2" class="mb-3 mr-sm-2">Password:</label>
       <input type="password" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Enter password" name="pswd"
         required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Enter password">
-      <button class="btn btn-outline-dark mt-4 mb-4" name="Login">Login</button>
+      <button class="btn btn-outline-dark mt-4 mb-4" name="Login" type="submit">Login</button>
     </form>
   </div>
-  <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 250" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(110.111, 101.428, 98.64, 1)" offset="0%"></stop><stop stop-color="rgba(9.575, 214.257, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,200L20,195.8C40,192,80,183,120,158.3C160,133,200,92,240,79.2C280,67,320,83,360,104.2C400,125,440,150,480,137.5C520,125,560,75,600,58.3C640,42,680,58,720,62.5C760,67,800,58,840,66.7C880,75,920,100,960,129.2C1000,158,1040,192,1080,170.8C1120,150,1160,75,1200,41.7C1240,8,1280,17,1320,54.2C1360,92,1400,158,1440,191.7C1480,225,1520,225,1560,225C1600,225,1640,225,1680,195.8C1720,167,1760,108,1800,83.3C1840,58,1880,67,1920,70.8C1960,75,2000,75,2040,75C2080,75,2120,75,2160,91.7C2200,108,2240,142,2280,150C2320,158,2360,142,2400,145.8C2440,150,2480,175,2520,191.7C2560,208,2600,217,2640,204.2C2680,192,2720,158,2760,154.2C2800,150,2840,175,2860,187.5L2880,200L2880,250L2860,250C2840,250,2800,250,2760,250C2720,250,2680,250,2640,250C2600,250,2560,250,2520,250C2480,250,2440,250,2400,250C2360,250,2320,250,2280,250C2240,250,2200,250,2160,250C2120,250,2080,250,2040,250C2000,250,1960,250,1920,250C1880,250,1840,250,1800,250C1760,250,1720,250,1680,250C1640,250,1600,250,1560,250C1520,250,1480,250,1440,250C1400,250,1360,250,1320,250C1280,250,1240,250,1200,250C1160,250,1120,250,1080,250C1040,250,1000,250,960,250C920,250,880,250,840,250C800,250,760,250,720,250C680,250,640,250,600,250C560,250,520,250,480,250C440,250,400,250,360,250C320,250,280,250,240,250C200,250,160,250,120,250C80,250,40,250,20,250L0,250Z"></path></svg>
   <!-- requirements for making password -->
   <!-- <ul class="ml-5 mt-5">
     <li>Password must be at least 8 characters long. </li>
