@@ -7,8 +7,10 @@ $pMailErr =  $pwdErr = "";
 // Required field and Data validation
 if (isset($_POST['Login'])) {
     if (empty($mail)) {
-        $pMailErr = " or Email required";
+        $pMailErr = "Email required";
         echo $pMailErr . "<br>";
+        echo "<a href='index.html'> Back to Login Page</a>";
+        $count = $count + 1;
     } else {
         $mail = test_input($mail);
         if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
@@ -21,6 +23,7 @@ if (isset($_POST['Login'])) {
         $pwdErr = "Password required";
         echo $pwdErr . "<br><br><br>";
         echo "<a href='index.html'> Back to Login Page</a>";
+        $count = $count + 1;
     } else {
         $password = test_input($password);
         if (!preg_match('/^(?=.*[0-9])(?=.*[A-Z]).{8,20}$/', $password)) {
@@ -41,10 +44,10 @@ function test_input($data)
 }
 // Login Data validation with respect to database
 if ($count == 0) {
-    $db =   mysqli_connect('localhost', 'root', '', 'ggsipuatt');
+    $db =   mysqli_connect('localhost', 'root', '', 'ggsipu');
     if ($db) {
 
-        $sql = "select mail, password from logindetails WHERE mail='" . $mail . "' and  password='" . $password . "'";
+        $sql = "SELECT mail, password FROM logindetails WHERE mail='" . $mail . "' and  password='" . $password . "'";
         $res = mysqli_query($db, $sql);
         if ($res->num_rows == 1) {
             echo "<script>window.location.href='select.html';</script>";

@@ -6,12 +6,12 @@
       $data= json_decode(file_get_contents("php://input"), true);
       $val_count= 0;
       $din= $data['tDate'];
-          $db =   mysqli_connect('localhost', 'root', '', 'ggsipuatt') or die("Connection failed: " . mysqli_connect_error());    
+          $db =   mysqli_connect('localhost', 'root', '', 'ggsipu') or die("Connection failed: " . mysqli_connect_error());    
             foreach($data as $x => $x_value) {
                 if($x== "tDate"){
                     continue;
                 }
-                $sql = "INSERT INTO radiodata(enrollNo,AbsentPresent,date) VALUES('$x','$x_value','$din')"; 
+                $sql = "INSERT INTO radiodata(enrollNo,AbsentPresent,entryDate) VALUES('$x','$x_value','$din')"; 
                 if(mysqli_query($db, $sql)){
                     $val_count= $val_count+1;
                 }

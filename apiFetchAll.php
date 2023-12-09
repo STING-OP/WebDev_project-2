@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
- $con=   mysqli_connect('localhost', 'root', '', 'ggsipuatt') or  die("Connection failed: " . mysqli_connect_error());
+ $con=   mysqli_connect('localhost', 'root', '', 'ggsipu') or  die("Connection failed: " . mysqli_connect_error());
  $sql= "select * from student_details";
  $res = mysqli_query($con, $sql) or die("Sql query failed");
  if(mysqli_num_rows($res)>0){
